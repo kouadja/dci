@@ -82,10 +82,6 @@ $ docker-compose up --build
 
 ---
 
-## 📩 Contact
-Pour toute question, contactez l'équipe AEJ via : i.bamba@emploijeunes.ci (cc: t.amia@emploijeunes.ci, y.gbaka@emploijeunes.ci)
-
----
 
 > 🧠 Ce projet démontre des compétences en développement full-stack, gestion d'API REST, Dockerisation, export de fichiers, validation de formulaire, génération PDF/CSV, etc.
 
