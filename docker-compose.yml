@@ -14,8 +14,8 @@ services:
     environment:
       - DB_HOST=mysql
       - DB_USER=root
-      - DB_PASSWORD=rootpassword
-      - DB_NAME=projetdb
+      - DB_PASSWORD=root
+      - DB_NAME=aejdb
     platform: linux/amd64 # Assurez-vous que l'architecture est compatible
 
   frontend:
@@ -39,8 +39,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-      MYSQL_ROOT_PASSWORD: "rootpassword" 
-      MYSQL_DATABASE: projetdb
+      MYSQL_ROOT_PASSWORD: root 
+      MYSQL_DATABASE: aejdb
       MYSQL_ROOT_HOST: '%'
     volumes:
       - dbdata:/var/lib/mysql
@@ -54,7 +54,7 @@ services:
       - "8889:80"
     environment:
       PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: "rootpassword" 
+      MYSQL_ROOT_PASSWORD: root
     platform: linux/amd64 # Assurez-vous que l'architecture est compatible
 
 volumes:

@@ -1,12 +1,12 @@
 {
   
-    "development": {
+    "developments": {
       "username": "root",
       "password": "rootpassword",
-      "database": "projetdb",  
+      "database": "aejdb",  
       "host": "mysql",  
       "dialect": "mysql",
-      "port": 8889  
+      "port": 3306  
     }
   
   
