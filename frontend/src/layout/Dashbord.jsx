@@ -465,7 +465,7 @@ const Dashboard = () => {
           </div> */}
 
           {/* Work Efficiency */}
-          <div className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm">
+        {/*   <div className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-gray-900">Efficacité au Travail</h2>
               <button className="p-1 hover:bg-gray-100 rounded">
@@ -473,7 +473,6 @@ const Dashboard = () => {
               </button>
             </div>
             <div className="relative h-48">
-              {/* Placeholder for line chart - in a real app, use a charting library */}
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full h-px bg-gray-200" />
               </div>
@@ -481,7 +480,7 @@ const Dashboard = () => {
                 <div className="px-2 py-1 bg-gray-900 text-white text-xs rounded">87%</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Activity */}
           {/*   <div className="bg-white rounded-xl p-6 shadow-sm">

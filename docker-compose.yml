@@ -14,13 +14,12 @@ services:
     environment:
       - DB_HOST=mysql
       - DB_USER=root
-      - DB_PASSWORD=root
+      - DB_PASSWORD=rootpassword
       - DB_NAME=projetdb
-
-    platform: linux/amd64  # Assurez-vous que l'architecture est compatible
+    platform: linux/amd64 # Assurez-vous que l'architecture est compatible
 
   frontend:
-    build: ./frontend
+    build: ./frontend  # Correctement indenté
     container_name: aej_frontend
     ports:
       - "5173:5173"
@@ -29,7 +28,8 @@ services:
       - /app/node_modules
     stdin_open: true
     tty: true
-    platform: linux/amd64  # Assurez-vous que l'architecture est compatible
+    platform: linux/amd64
+    command: sh -c "npm install && npm run dev -- --host" # Assurez-vous que l'architecture est compatible
 
   mysql:
     image: mysql:5.7
@@ -38,11 +38,13 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: yourpassword
-      MYSQL_DATABASE: aejdb
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "rootpassword" 
+      MYSQL_DATABASE: projetdb
+      MYSQL_ROOT_HOST: '%'
     volumes:
       - dbdata:/var/lib/mysql
-    platform: linux/amd64  # Assurez-vous que l'architecture est compatible
+    platform: linux/amd64 # Assurez-vous que l'architecture est compatible
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -52,8 +54,8 @@ services:
       - "8889:80"
     environment:
       PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: root
-    platform: linux/amd64  # Assurez-vous que l'architecture est compatible
+      MYSQL_ROOT_PASSWORD: "rootpassword" 
+    platform: linux/amd64 # Assurez-vous que l'architecture est compatible
 
 volumes:
   dbdata:

@@ -2,9 +2,9 @@
   
     "development": {
       "username": "root",
-      "password": "root",
+      "password": "rootpassword",
       "database": "projetdb",  
-      "host": "localhost",  
+      "host": "mysql",  
       "dialect": "mysql",
       "port": 8889  
     }
