@@ -78,7 +78,7 @@ $ docker-compose up --build
 ### Accès :
 - Frontend : http://localhost:5173
 - Backend API : http://localhost:3000
-- PhpMyAdmin : http://localhost:8080 (user: root / pass: yourpassword)
+- PhpMyAdmin : http://localhost:8080 (user: root / pass: root)
 - dashboard : http://localhost:5173/dashboard
 
 ---
